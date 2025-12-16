@@ -56,17 +56,19 @@ for (let i = 0; i < teamMembers.length; i++) {
   const teamMember = teamMembers[i];
 
   // Aggiungiamo una nuova card alla stringa "cards"
+  // Con le proprietà dell'oggetto corrente
+  // In questo modo ogni card avrà dati diversi in base al membro del team
   cards += `
         <div class="card mb-3" style="max-width: 540px;">
             <div class="row g-0">
                 <div class="col-md-4">
-                    <img src="./img/male1.png" class="img-fluid rounded-start" alt="...">
+                    <img src="${teamMember.img}" class="img-fluid rounded-start" alt="${teamMember.name}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">Marco Bianchi</h5>
-                        <p class="card-text">Designer</p>
-                        <p class="card-text"><small class="text-body-secondary">marcobianchi@team.com</small></p>
+                        <h5 class="card-title">${teamMember.name}</h5>
+                        <p class="card-text">${teamMember.role}</p>
+                        <p class="card-text"><small class="text-body-secondary">${teamMember.email}</small></p>
                     </div>
                 </div>
             </div>
