@@ -60,16 +60,16 @@ for (let i = 0; i < teamMembers.length; i++) {
   // In questo modo ogni card avrà dati diversi in base al membro del team
   cards += `
   <div class="col-12 col-md-6 col-lg-4 mb-3">
-        <div class="card text-start">
+        <div class="card text-start bg-dark ">
             <div class="row g-0">
                 <div class="col-md-4">
                     <img src="${teamMember.img}" class="img-fluid rounded-start" alt="${teamMember.name}">
                 </div>
                 <div class="col-md-8">
                     <div class="card-body">
-                        <h5 class="card-title">${teamMember.name}</h5>
-                        <p class="card-text">${teamMember.role}</p>
-                        <p class="card-text"><small class="text-body-secondary">${teamMember.email}</small></p>
+                        <h5 class="card-title"><b class="text-light">${teamMember.name}</b></h5>
+                        <p class="card-text text-light">${teamMember.role}</p>
+                        <p class="card-text text-info">${teamMember.email}</p>
                     </div>
                 </div>
             </div>
